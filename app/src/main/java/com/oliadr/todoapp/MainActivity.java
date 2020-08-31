@@ -2,6 +2,7 @@ package com.oliadr.todoapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -16,14 +17,16 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<String> arrayAdapter;
     ListView listView;
     EditText editText;
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ToDoList = new ArrayList<>();
         arrayAdapter = new ArrayAdapter<>(this,R.layout.list_view_layout,ToDoList);
-        listView = findViewById(R.id.list_view);
 
+        listView = findViewById(R.id.list_view);
         listView.setAdapter(arrayAdapter);
 
         editText = findViewById(R.id.id_edit_text);
