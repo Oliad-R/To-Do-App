@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ToDoApp</string>
+    <string name="header">Welcome Back, Oliad</string>
+    <string name="subheader">You have 14 Tasks for Today</string>
+    <string name="item">This is an Item</string>
+    <string name="plus">+</string>
 </resources>
